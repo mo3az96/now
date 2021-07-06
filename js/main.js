@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //////////** main slider **//////////
     var mainswiper = new Swiper('.main-slider .swiper-container', {
-        spaceBetween: 10,
+        spaceBetween: 15,
         loop: true,
         autoplay: {
             delay: 5000,
@@ -21,7 +21,7 @@ $(document).ready(function () {
         breakpoints: {
             0: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 15,
             },
             767: {
                 slidesPerView: 3,
@@ -43,7 +43,7 @@ $(document).ready(function () {
         breakpoints: {
             0: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 15,
             },
             767: {
                 slidesPerView: 3,

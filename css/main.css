@@ -629,6 +629,10 @@ html[dir="ltr"] .agree .text a {
   }
 }
 
+.item {
+  position: relative;
+}
+
 .item .item-img-container {
   width: 100%;
   position: relative;
@@ -1623,6 +1627,44 @@ html[dir="ltr"] .section-more {
 
 @media (max-width: 991px) {
   .register-content {
+    padding-bottom: 70px;
+  }
+}
+
+.items-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 70px 30px;
+}
+
+@media (max-width: 991px) {
+  .items-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 50px 23px;
+  }
+}
+
+@media (max-width: 991px) {
+  .items-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}
+
+.item-grid {
+  overflow: hidden;
+}
+
+.list-content {
+  padding-bottom: 160px;
+}
+
+@media (max-width: 991px) {
+  .list-content {
     padding-bottom: 70px;
   }
 }
