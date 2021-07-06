@@ -141,6 +141,31 @@ input[type=number] {
   }
 }
 
+.page-title {
+  font-size: 22px;
+  color: var(--sec-color);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 52px;
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    margin: 0 0 30px;
+  }
+}
+
+.content-section {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .content-section {
+    padding-bottom: 70px;
+    padding-top: 40px;
+  }
+}
+
 @font-face {
   font-family: 'tajawal';
   src: url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff2") format("woff2"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff") format("woff"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.ttf") format("truetype");
@@ -190,13 +215,29 @@ input[type=number] {
   font-style: normal;
 }
 
-.input-container {
-  position: relative;
-  width: 100%;
+.form-group {
   margin-bottom: 22px;
 }
 
-.input {
+.form-group.required > label::after {
+  content: "*";
+  color: #fd7a2b;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+label {
+  margin: 0 0 10px;
+  padding: 0 30px;
+  font-size: 15px;
+  color: var(--sec-color);
+  font-weight: 500;
+}
+
+.form-control {
   width: 100%;
   height: 50px;
   border-radius: var(--border-radius);
@@ -205,38 +246,55 @@ input[type=number] {
   font-size: 17px;
   font-weight: 500;
   color: var(--sec-color);
-  text-align: left;
   padding: 0 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.input::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   font-weight: 400;
   color: #a4a4a4;
 }
 
-.input:-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
   font-weight: 400;
   color: #a4a4a4;
 }
 
-.input::-ms-input-placeholder {
+.form-control::-ms-input-placeholder {
   font-weight: 400;
   color: #a4a4a4;
 }
 
-.input::placeholder {
+.form-control::placeholder {
   font-weight: 400;
   color: #a4a4a4;
 }
 
-.input:focus {
+.form-control:focus {
   border-color: var(--main-color);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.input.tel-input {
+html[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+html[dir="ltr"] .form-control {
+  text-align: left;
+}
+
+.form-control.tel-input {
   padding-left: 138px;
+}
+
+html[dir="rtl"] .form-control.tel-input {
+  text-align: left;
+}
+
+html[dir="ltr"] .form-control.tel-input {
+  text-align: left;
 }
 
 .input-flag {
@@ -266,6 +324,115 @@ input[type=number] {
   margin-right: 8px;
 }
 
+.agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.agree .custom-checkbox {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html[dir="rtl"] .agree .custom-checkbox {
+  margin-left: 15px;
+}
+
+html[dir="ltr"] .agree .custom-checkbox {
+  margin-right: 15px;
+}
+
+.agree .check-mark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--sec-color);
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.agree .check-mark i {
+  -webkit-transform: scale(0) rotate(360deg);
+          transform: scale(0) rotate(360deg);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.agree input {
+  display: none;
+}
+
+.agree input:checked ~ .check-mark i {
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+}
+
+.agree .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--sec-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.agree .text a {
+  color: var(--main-color);
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html[dir="rtl"] .agree .text a {
+  margin-right: 6px;
+}
+
+html[dir="ltr"] .agree .text a {
+  margin-left: 6px;
+}
+
+.agree .text a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(var(--main-rgb), 0.5);
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.agree .text a:hover, .agree .text a:focus {
+  text-decoration: none;
+}
+
+.agree .text a:hover::after, .agree .text a:focus::after {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .submit-btn {
   width: 100%;
   height: 50px;
@@ -288,8 +455,10 @@ input[type=number] {
   transition: all 0.3s ease-in-out;
 }
 
-.submit-btn:hover {
+.submit-btn:hover, .submit-btn:focus {
+  text-decoration: none;
   background-color: var(--sec-color);
+  color: #fff;
 }
 
 .mo-navbar {
@@ -1324,22 +1493,71 @@ html[dir="ltr"] .lang {
   }
 }
 
-main,
-section {
+.breadcrumb-section {
+  margin-top: 25px;
+  margin-bottom: 57px;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-section {
+    display: none;
+  }
+}
+
+.breadcrumb-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.breadcrumb-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumb-li ~ li::before {
+  content: "/";
+  color: #808080;
+  font-size: 14px;
+  margin: 0 9px;
+}
+
+.breadcrumb-a {
+  color: #808080;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.breadcrumb-a:hover, .breadcrumb-a:focus {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.home-body main,
+.home-body section {
   padding: 0 0 100px;
   background-color: #fff;
 }
 
 @media (max-width: 991px) {
-  main,
-  section {
+  .home-body main,
+  .home-body section {
     padding: 0 0 70px;
   }
 }
 
 @media (max-width: 767px) {
-  main,
-  section {
+  .home-body main,
+  .home-body section {
     padding: 0 0 40px;
   }
 }
@@ -1391,6 +1609,22 @@ html[dir="rtl"] .section-more {
 
 html[dir="ltr"] .section-more {
   margin-left: 30px;
+}
+
+.register-form {
+  margin: auto;
+  width: 100%;
+  max-width: 410px;
+}
+
+.register-content {
+  padding-bottom: 125px;
+}
+
+@media (max-width: 991px) {
+  .register-content {
+    padding-bottom: 70px;
+  }
 }
 
 footer {
