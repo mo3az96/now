@@ -94,6 +94,10 @@ $(document).ready(function () {
     }
     lazyLoad();
 });
+function uploadImg(input) {
+    $(input).siblings(".single-filename").html(input.files[0].name);
+    console.log(input.files[0].name);
+}
 function lazyLoad() {
     const images = document.querySelectorAll('.lazy-img');
 
