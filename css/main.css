@@ -195,14 +195,6 @@ input[type=number] {
   opacity: 1;
 }
 
-.datetime-reset-button {
-  display: none !important;
-}
-
-.datetime-edit-field {
-  display: none !important;
-}
-
 @font-face {
   font-family: 'tajawal';
   src: url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff2") format("woff2"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff") format("woff"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.ttf") format("truetype");
@@ -1500,7 +1492,6 @@ html[dir="ltr"] .date-picker-container .datePicker {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  display: none;
 }
 
 html[dir="rtl"] .date-picker-container span {
