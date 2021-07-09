@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
     //////////** main slider **//////////
     var mainswiper = new Swiper('.main-slider .swiper-container', {
         spaceBetween: 15,
@@ -79,7 +80,7 @@ $(document).ready(function () {
         }
         $parentElm.find(".qty-input").val(value);
     });
-
+    ///////// ** menu ** ///////// 
     if ($(window).width() <= 991) {
         $('.menu-btn').click(function () {
             $("nav").addClass("active");
@@ -92,6 +93,28 @@ $(document).ready(function () {
             $("body").removeClass("overflow");
         })
     }
+    ///////// ** select address ** ///////// 
+    $(".adress-item>input").on('change', function () {
+        if ($(this).is(":checked")) {
+
+            var addressText = $.trim($(this).siblings(".address-text").text())
+            $(".locationInput").val(addressText)
+            $('#addressBook-modal').modal('hide')
+        }
+    });
+    ///////// ** select time ** ///////// 
+    $(".select-date").on('click', function () {
+        if ($("input.select-date").is(":checked")) {
+            $('#date-modal').modal('show')
+        }
+    });
+    $(".datePicker").flatpickr({
+        locale: document.dir == 'rtl' ? "ar" : "en",
+        minDate: "today",
+        dateFormat: "d M Y",
+        defaultDate: "today"
+    });
+
     lazyLoad();
 });
 function uploadImg(input) {
