@@ -195,6 +195,14 @@ input[type=number] {
   opacity: 1;
 }
 
+.datetime-reset-button {
+  display: none !important;
+}
+
+.datetime-edit-field {
+  display: none !important;
+}
+
 @font-face {
   font-family: 'tajawal';
   src: url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff2") format("woff2"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.woff") format("woff"), url("../fonts/TAJAWAL/Tajawal-ExtraLight.ttf") format("truetype");
@@ -1451,6 +1459,8 @@ html[dir="ltr"] .register-text a {
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  -moz-appearance: textfield;
 }
 
 .date-picker-container .datePicker:focus {
@@ -1469,7 +1479,7 @@ html[dir="ltr"] .date-picker-container .datePicker {
   text-align: left;
 }
 
-.date-picker-container .datePicker::-webkit-inner-spin-button, .date-picker-container .datePicker::-webkit-calendar-picker-indicator {
+.date-picker-container .datePicker::-webkit-inner-spin-button, .date-picker-container .datePicker::-webkit-calendar-picker-indicator, .date-picker-container .datePicker::-webkit-clear-button {
   display: none;
   -webkit-appearance: none;
 }
@@ -1490,6 +1500,7 @@ html[dir="ltr"] .date-picker-container .datePicker {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
+  display: none;
 }
 
 html[dir="rtl"] .date-picker-container span {
@@ -1714,6 +1725,9 @@ html[dir="ltr"] .logform-link {
   font-size: 30px;
   color: var(--sec-color);
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1725,8 +1739,8 @@ html[dir="ltr"] .logform-link {
   font-size: 14px;
   border-radius: 50%;
   position: absolute;
-  top: -6px;
-  right: -12px;
+  top: -11px;
+  right: -11px;
   background-color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1739,6 +1753,12 @@ html[dir="ltr"] .logform-link {
           justify-content: center;
   text-align: center;
   line-height: 20px;
+}
+
+@media (max-width: 767px) {
+  .header-icon .cart-items {
+    padding-top: 4px;
+  }
 }
 
 .header-icon:hover, .header-icon:focus {
