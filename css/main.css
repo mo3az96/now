@@ -1476,6 +1476,12 @@ html[dir="ltr"] .date-picker-container .datePicker {
   -webkit-appearance: none;
 }
 
+@media (max-width: 767px) {
+  .date-picker-container .datePicker {
+    padding: 0;
+  }
+}
+
 .date-picker-container span {
   position: absolute;
   top: 50%;
@@ -1500,6 +1506,15 @@ html[dir="rtl"] .date-picker-container span {
 
 html[dir="ltr"] .date-picker-container span {
   right: 16px;
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .date-picker-container span {
+    left: 0;
+  }
+  html[dir="ltr"] .date-picker-container span {
+    right: 0;
+  }
 }
 
 .times-list {
@@ -2981,6 +2996,12 @@ html[dir="ltr"] .locationInput-container .locationInput {
   color: var(--sec-color);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .locationInput-container .adressBook:hover, .locationInput-container .adressBook:focus {
