@@ -490,6 +490,93 @@ html[dir="ltr"] .agree .text a {
   color: #fff;
 }
 
+.float-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+  margin-bottom: 28px;
+}
+
+.float-field label,
+.float-field input {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.float-field input {
+  background-color: #fff !important;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid #efefef;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 5px 0 15px;
+}
+
+.float-field input::-webkit-input-placeholder {
+  opacity: 0;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+
+.float-field input:-ms-input-placeholder {
+  opacity: 0;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+
+.float-field input::-ms-input-placeholder {
+  opacity: 0;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+
+.float-field input::placeholder {
+  opacity: 0;
+  font-weight: 400;
+  color: #a4a4a4;
+}
+
+.float-field input:focus {
+  border-color: var(--main-color);
+}
+
+.float-field input:placeholder-shown + label {
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+}
+
+.float-field input:not(:placeholder-shown) + label {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  cursor: pointer;
+}
+
+.float-field input:focus + label {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  cursor: pointer;
+}
+
+.float-field label {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  color: #a4a4a4;
+  cursor: text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
 .flatpickr-day.selected,
 .flatpickr-day.startRange,
 .flatpickr-day.endRange,
@@ -1964,6 +2051,7 @@ html[dir="ltr"] .user-cont {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .breadcrumb-li {
@@ -3351,6 +3439,140 @@ html[dir="ltr"] .locationInput-container .adressBook {
   font-size: 19px;
   color: var(--sec-color);
   margin-top: 6px;
+}
+
+.my-acc-content {
+  padding-bottom: 130px;
+}
+
+@media (max-width: 767px) {
+  .my-acc-content {
+    padding-bottom: 70px;
+  }
+}
+
+.acc-list {
+  border: 2px solid var(--border-color);
+  background-color: white;
+  border-radius: 16px;
+  padding: 21px 0 30px;
+}
+
+.acc-item {
+  padding: 0 15px;
+}
+
+.acc-item:last-of-type > .acc-link {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.acc-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  padding: 0 5px 6px;
+  margin-bottom: 6px;
+  color: var(--sec-color);
+  border-bottom: 1px solid #efefef;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.acc-link i {
+  width: 30px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.acc-link:hover, .acc-link:focus {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.acc-link.active {
+  color: var(--main-color);
+}
+
+.acc-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 33px;
+  margin-top: 21px;
+}
+
+@media (max-width: 991px) {
+  .acc-head {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+}
+
+.acc-title {
+  font-size: 20px;
+  color: var(--sec-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.acc-form {
+  width: 100%;
+  max-width: 466px;
+}
+
+.acc-form .submit-btn {
+  width: 252px;
+  margin: 50px 0 0;
+}
+
+@media (max-width: 991px) {
+  .acc-form .submit-btn {
+    margin: 40px 0 0;
+  }
+}
+
+.edit-pass-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: var(--main-color);
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-pass-link i {
+  margin: 0 7px;
+  font-size: 14px;
+}
+
+.edit-pass-link:hover, .edit-pass-link:focus {
+  color: var(--sec-color);
+  text-decoration: none;
 }
 
 footer {
