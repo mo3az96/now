@@ -116,6 +116,8 @@ $(document).ready(function () {
             defaultDate: "today"
         });
     }
+    ///////// ** select2 ** /////////
+    $(".new-address-select").select2(); 
     lazyLoad();
 });
 function uploadImg(input) {
