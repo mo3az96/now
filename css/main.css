@@ -3575,6 +3575,53 @@ html[dir="ltr"] .locationInput-container .adressBook {
   text-decoration: none;
 }
 
+.add-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-new:hover, .add-new:focus {
+  color: #fff;
+  background-color: var(--sec-color);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .add-new {
+    width: 175px;
+  }
+}
+
+.address-book-content {
+  padding-bottom: 160px;
+}
+
+@media (max-width: 767px) {
+  .address-book-content {
+    padding-bottom: 70px;
+  }
+}
+
+.address-book-content .adress-item:last-of-type {
+  border: none;
+}
+
 footer {
   background-color: #fff;
 }
