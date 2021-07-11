@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
     <title>NOW</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/floating-labels/">
+
     <link rel='shortcut icon' type='img/png' href='images/fav.png' />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
@@ -60,7 +62,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="en/cart.html" class="lang">
+                    <a href="en/order-details.html" class="lang">
                         en
                     </a>
                 </nav>
@@ -110,8 +112,13 @@
                     </a>
                 </li>
                 <li class="breadcrumb-li">
-                    <a href="cart.html" class="breadcrumb-a">
-                        سلة الشراء
+                    <a href="my-orders.html" class="breadcrumb-a">
+                        طلباتي
+                    </a>
+                </li>
+                <li class="breadcrumb-li">
+                    <a href="order-details.html" class="breadcrumb-a">
+                        تفاصيل الطلب
                     </a>
                 </li>
             </ul>
@@ -120,162 +127,165 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Page Content -->
-    <section class="content-section cart-content">
+    <section class="content-section order-content">
         <div class="container">
-            <h2 class="page-title">
-                سلة الشراء
-            </h2>
-            <div class="cart-items">
-                <div class="cart-item">
-                    <a href="product.html" class="loading-img cart-img">
-                        <img class="lazy-img" data-src="images/items/01.png">
-                    </a>
-                    <div class="cart-item-info">
-                        <a href="product.html" class="cart-name">
-                            جهاز فلترة المياه من رومر
-                        </a>
-                        <div class="qty-price">
-                            <div class="item-qty">
-                                <a role="button" class="qty-control qty-plus">
-                                    <i class="fas fa-plus-circle"></i>
-                                </a>
-                                <a role="button" class="qty-control qty-minus">
-                                    <i class="fas fa-minus-circle"></i>
-                                </a>
-                                <input type="number" class="qty-input" value="1" data-max="10" data-min="1">
-                            </div>
-                            <strong class="item-price">
-                                750 ريال
-                            </strong>
-                            <a role="button" class="item-delete">
-                                <i class="fas fa-times-circle"></i>
+            <div class="row">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <ul class="acc-list list-unstyled">
+                        <li class="acc-item">
+                            <a class="acc-link" href="my-acc.html">
+                                <i class="fas fa-edit"></i>
+                                بيانات الحساب
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="acc-item">
+                            <a class="acc-link" href="address-book.html">
+                                <i class="fas fa-address-book"></i>
+                                دفتر العناوين
+                            </a>
+                        </li>
+                        <li class="acc-item">
+                            <a class="acc-link active" href="my-orders.html">
+                                <i class="fas fa-file-alt"></i>
+                                طلباتي
+                            </a>
+                        </li>
+                        <li class="acc-item">
+                            <a class="acc-link" href="my-acc.html">
+                                <i class="fas fa-cog"></i>
+                                الإعدادات
+                            </a>
+                        </li>
+                        <li class="acc-item">
+                            <a class="acc-link" href="index.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                تسجيل خروج
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="cart-item">
-                    <a href="service.html" class="loading-img cart-img">
-                        <img class="lazy-img" data-src="images/items/02.png">
-                    </a>
-                    <div class="cart-item-info">
-                        <a href="service.html" class="cart-name">
-                            جهاز فلترة المياه من رومر
+                <div class="col-lg-9">
+                    <div class="acc-head">
+                        <h2 class="acc-title">
+                            تفاصيل الطلب
+                        </h2>
+                        <a href="#!" class="reorder">
+                            <i class="fas fa-redo"></i>
+                            اعادة الطلب
                         </a>
-                        <div class="qty-price">
-                            <div class="item-qty">
-                                <a role="button" class="qty-control qty-plus">
-                                    <i class="fas fa-plus-circle"></i>
-                                </a>
-                                <a role="button" class="qty-control qty-minus">
-                                    <i class="fas fa-minus-circle"></i>
-                                </a>
-                                <input type="number" class="qty-input" value="1" data-max="10" data-min="1">
-                            </div>
-                            <strong class="item-price">
-                                750 ريال
-                            </strong>
-                            <a role="button" class="item-delete">
-                                <i class="fas fa-times-circle"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <div class="cart-item">
-                    <a href="product.html" class="loading-img cart-img">
-                        <img class="lazy-img" data-src="images/items/03.png">
-                    </a>
-                    <div class="cart-item-info">
-                        <a href="product.html" class="cart-name">
-                            جهاز فلترة المياه من رومر
-                        </a>
-                        <div class="qty-price">
-                            <div class="item-qty">
-                                <a role="button" class="qty-control qty-plus">
-                                    <i class="fas fa-plus-circle"></i>
-                                </a>
-                                <a role="button" class="qty-control qty-minus">
-                                    <i class="fas fa-minus-circle"></i>
-                                </a>
-                                <input type="number" class="qty-input" value="1" data-max="10" data-min="1">
+                    <div class="single-order">
+                        <div class="order-head">
+                            <div class="order-no">
+                                رقم الطلب <span>2547</span>
                             </div>
-                            <strong class="item-price">
-                                750 ريال
-                            </strong>
-                            <a role="button" class="item-delete">
-                                <i class="fas fa-times-circle"></i>
-                            </a>
+                            <div class="order-date">
+                                25 مايو 2021
+                            </div>
+                        </div>
+                        <div class="order-progress">
+                            <div class="order-step done">
+                                <div class="step-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="step-name">
+                                    قيد التنفيذ
+                                </span>
+                            </div>
+                            <div class="order-step done">
+                                <div class="step-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="step-name">
+                                    جاري التوصيل
+                                </span>
+                            </div>
+                            <div class="order-step">
+                                <div class="step-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="step-name">
+                                    تم التوصيل
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order-summary">
+                            <div class="summry-item">
+                                <div class="order-name">
+                                    <a href="product.html" class="name">
+                                        جهاز فلترة المياه من رومر
+                                    </a>
+                                    <div class="single-qty-price">
+                                        <div class="order-qty">
+                                            x 1
+                                        </div>
+                                        <div class="single-price">
+                                            750 ريال
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-price">
+                                    750 ريال
+                                </div>
+                            </div>
+                        </div>
+                        <div class="totals">
+                            <div class="total">
+                                <span class="title">
+                                    إجمالي الطلب
+                                </span>
+                                <span class="value">
+                                    750 ريال
+                                </span>
+                            </div>
+                            <div class="total">
+                                <span class="title">
+                                    تكلفة التوصيل
+                                </span>
+                                <span class="value">
+                                    10 ريال
+                                </span>
+                            </div>
+                            <div class="total">
+                                <span class="title">
+                                    ضريبة القيمة المضافة
+                                </span>
+                                <span class="value">
+                                    114 ريال
+                                </span>
+                            </div>
+                            <div class="total">
+                                <span class="title">
+                                    الإجمالي
+                                </span>
+                                <span class="value">
+                                    874 ريال
+                                </span>
+                            </div>
+                        </div>
+                        <div class="payment">
+                            <h4 class="title">
+                                وسيلة الدفع
+                            </h4>
+                            <div class="method">
+                                <img src="images/checkout/01.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="location">
+                            <h4 class="title">
+                                عنوان التوصيل
+                            </h4>
+                            <div class="order-map">
+                                <div id="order-map"></div>
+                                <div class="locationInput-container">
+                                    <input disabled type="text" class="locationInput" value="الصقور، خميس مشيط 62462، السعودية">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="container">
-            <div class="code-inputs">
-                <div class="code-input-cont">
-                    <label>
-                        كوبون الخصم
-                    </label>
-                    <div class="code-input">
-                        <input class="active" type="text" placeholder="اكتب كود كوبون الخصم هنا" value="OC215JE81">
-                        <button class="code-btn-input">
-                            <i class="fas fa-check"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="code-input-cont">
-                    <label>
-                        قسائم الشراء
-                    </label>
-                    <div class="code-input">
-                        <input type="text" placeholder="اكتب كود قسيمة الشراء هنا">
-                        <button class="code-btn-input">
-                            <i class="fas fa-check"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="container">
-            <div class="totals">
-                <div class="total">
-                    <span class="total-title">
-                        إجمالي الطلب
-                    </span>
-                    <span class="total-number">
-                        2250 ريال
-                    </span>
-                </div>
-                <div class="total">
-                    <span class="total-title">
-                        تكلفة التوصيل
-                    </span>
-                    <span class="total-number">
-                        10 ريال
-                    </span>
-                </div>
-                <div class="total">
-                    <span class="total-title">
-                        ضريبة القيمة المضافة
-                    </span>
-                    <span class="total-number">
-                        339 ريال
-                    </span>
-                </div>
-                <div class="total">
-                    <span class="total-title">
-                        الإجمالي
-                    </span>
-                    <span class="total-number">
-                        2599 ريال
-                    </span>
-                </div>
-            </div>
-        </div>
-        <a href="checkout.html" class="cart-btn">
-            إتمام الطلب
-        </a>
     </section>
     <!-- End Page Content -->
 
@@ -390,7 +400,32 @@
     <script src="js/flatpickr.min.js"></script>
     <script src="js/ar.js"></script>
     <script src="js/select2.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?region=SA&language=ar&key=AIzaSyA9UeezZ2xyNjrwck8SLdh9NxsJp6HhLQc&libraries=places">
+    </script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            initMap()
+        });
+
+        function initMap() {
+            const myLatLng = {
+                lat: 24.774255,
+                lng: 46.737586534
+            };
+            let map = new google.maps.Map(document.getElementById("order-map"), {
+                center: myLatLng,
+                zoom: 17,
+            });
+            let marker = new google.maps.Marker({
+                position: map.getCenter(),
+                map,
+                icon: "images/pin.png"
+            });
+        }
+    </script>
 </body>
 
 </HTML>
