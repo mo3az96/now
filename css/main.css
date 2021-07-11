@@ -2398,6 +2398,54 @@ html[dir="ltr"] .section-more {
   }
 }
 
+.mo-pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+}
+
+.mo-pages li {
+  margin: 3.5px;
+}
+
+.mo-pages a {
+  border-radius: 50%;
+  background-color: rgba(var(--sec-rgb), 0.4);
+  width: 34px;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mo-pages a:hover, .mo-pages a:focus {
+  color: #fff;
+  background-color: var(--main-color);
+  text-decoration: none;
+}
+
+.mo-pages a.active {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
 .single-content {
   padding-bottom: 150px;
 }
