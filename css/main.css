@@ -4848,6 +4848,70 @@ html[dir="ltr"] .contact-form .submit-btn {
   color: var(--sec-color);
 }
 
+.about-content {
+  padding-bottom: 125px;
+}
+
+@media (max-width: 767px) {
+  .about-content {
+    padding-bottom: 70px;
+  }
+}
+
+.about-text {
+  padding: 7px 0 0;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 2.222;
+  color: var(--sec-color);
+  margin: 0;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+.about-img {
+  background-color: #ededed;
+  position: relative;
+  padding-bottom: 81.8018018018%;
+  overflow: hidden;
+}
+
+.about-img .about-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-attachment: fixed;
+}
+
+html[dir="rtl"] .about-img .about-bg {
+  background-position: left;
+}
+
+html[dir="ltr"] .about-img .about-bg {
+  background-position: -116%;
+}
+
+@media (max-width: 991px) {
+  html[dir="ltr"] .about-img .about-bg {
+    background-position: left;
+  }
+}
+
+.about-img .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 66.5%;
+  z-index: 2;
+}
+
 footer {
   background-color: #fff;
 }
