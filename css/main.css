@@ -4867,7 +4867,7 @@ html[dir="ltr"] .contact-form .submit-btn {
   line-height: 2.222;
   color: var(--sec-color);
   margin: 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: justify;
 }
 
@@ -4910,6 +4910,116 @@ html[dir="ltr"] .about-img .about-bg {
           transform: translate(-50%, -50%);
   width: 66.5%;
   z-index: 2;
+}
+
+.banks-content {
+  padding-bottom: 85px;
+}
+
+@media (max-width: 767px) {
+  .banks-content {
+    padding-bottom: 70px;
+  }
+}
+
+.bank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 39px;
+  margin-bottom: 31px;
+}
+
+.bank:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .bank {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.bank .bank-img {
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  width: 129px;
+  height: 129px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.bank .bank-info {
+  margin: 0 35px;
+}
+
+@media (max-width: 767px) {
+  .bank .bank-info {
+    margin: 15px 0 0;
+  }
+}
+
+.bank li {
+  font-size: 16px;
+  color: #737374;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4px 0;
+}
+
+@media (max-width: 767px) {
+  .bank li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
+.bank span {
+  font-size: 16px;
+  color: var(--sec-color);
+  font-weight: 700;
+  width: 130px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .bank span {
+    width: auto;
+  }
 }
 
 footer {
