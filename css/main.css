@@ -5022,6 +5022,31 @@ html[dir="ltr"] .about-img .about-bg {
   }
 }
 
+.info-container p {
+  font-size: 18px;
+  color: var(--sec-color);
+  line-height: 2.222;
+  text-align: justify;
+}
+
+.info-container ul li {
+  font-size: 18px;
+  color: var(--sec-color);
+  line-height: 1.667;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.info-container ul li:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: var(--main-color);
+  content: "\f111";
+  font-size: 8px;
+  width: 24px;
+  display: inline-block;
+}
+
 footer {
   background-color: #fff;
 }
