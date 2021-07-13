@@ -3965,6 +3965,78 @@ html[dir="ltr"] .new-address-map .locationInput-container .locationInput {
   }
 }
 
+.address-book-content .adress-item {
+  cursor: auto;
+}
+
+.address-book-content .item-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.address-book-content .item-tool {
+  font-size: 24px;
+  color: #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.address-book-content .item-tool:hover, .address-book-content .item-tool:focus {
+  text-decoration: none;
+}
+
+html[dir="rtl"] .address-book-content .item-tool {
+  margin-right: 15px;
+}
+
+html[dir="ltr"] .address-book-content .item-tool {
+  margin-left: 15px;
+}
+
+.address-book-content .checkmark:hover, .address-book-content .checkmark:focus {
+  color: var(--main-color);
+}
+
+.address-book-content .checkmark.default {
+  color: var(--main-color);
+}
+
+.address-book-content .edit {
+  font-size: 20px;
+}
+
+.address-book-content .edit:hover, .address-book-content .edit:focus {
+  color: var(--sec-color);
+}
+
+.address-book-content .delete {
+  font-size: 20px;
+}
+
+.address-book-content .delete:hover, .address-book-content .delete:focus {
+  color: #f00;
+}
+
 .orders-content {
   padding-bottom: 130px;
 }
