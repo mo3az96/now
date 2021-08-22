@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/flatpickr.min.css">
     <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -129,9 +130,56 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="single-img-container">
-                        <div class="loading-img single-img">
-                            <img class="lazy-img" data-src="images/items/01.png">
+                    <div class="product-imgs-cont">
+                        <div class="swiper-container product-imgs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="single-img-container">
+                                        <a data-fancybox="post" href="images/items/01.png" class="loading-img single-img">
+                                            <img class="lazy-img" data-src="images/items/01.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-img-container">
+                                        <a data-fancybox="post" href="images/items/02.png" class="loading-img single-img">
+                                            <img class="lazy-img" data-src="images/items/02.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="single-img-container">
+                                        <a data-fancybox="post" href="images/items/03.png" class="loading-img single-img">
+                                            <img class="lazy-img" data-src="images/items/03.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-container product-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thumb-cont">
+                                        <div class="loading-img thumb-img">
+                                            <img class="lazy-img" data-src="images/items/01.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-cont">
+                                        <div class="loading-img thumb-img">
+                                            <img class="lazy-img" data-src="images/items/02.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-cont">
+                                        <div class="loading-img thumb-img">
+                                            <img class="lazy-img" data-src="images/items/03.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <span class="single-sale">
                             %25
@@ -439,6 +487,7 @@
     <script src="js/flatpickr.min.js"></script>
     <script src="js/ar.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/fancybox.js"></script>
     <script src="js/main.js"></script>
 </body>
 

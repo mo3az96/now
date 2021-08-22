@@ -117,7 +117,33 @@ $(document).ready(function () {
         });
     }
     ///////// ** select2 ** /////////
-    $(".new-address-select").select2(); 
+    $(".new-address-select").select2();
+    ///////// ** gallery thumbs ** /////////
+    var productThumbs = new Swiper(".product-thumbs", {
+
+        slidesPerView: 4,
+        // loop: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            0: {
+                spaceBetween: 10,
+            },
+            767: {
+                spaceBetween: 15,
+            },
+            1199: {
+                spaceBetween: 15,
+            },
+        },
+    });
+    var productImgs = new Swiper(".product-imgs", {
+        spaceBetween: 1,
+        // loop: true,
+        thumbs: {
+            swiper: productThumbs,
+        },
+    });
     lazyLoad();
 });
 function uploadImg(input) {
